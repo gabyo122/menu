@@ -1,0 +1,197 @@
+body {
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-size: 13px;  
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-weight: 300;
+}
+
+.container {
+  width: 1300px;
+  height: 700px;
+  margin: auto;
+  display: flex; 
+  -webkit-perspective: 1600px;
+	-moz-perspective: 1600px;
+	-o-perspective: 1600px;
+	-ms-perspective: 1600px;
+	perspective: 1600px;   
+}
+
+.left, 
+.center, .right {
+  width: 25%;
+  height: 100%;
+	max-width: 370px;  	
+	color: #2a323f;
+  padding: 30px;
+  background: #fff;
+	box-shadow: 
+		inset 0 0 0 16px #fff, 
+		inset 0 0 0 17px #e6b741, 
+		inset 0 0 0 18px #fff, 
+		inset 0 0 0 19px #e6b741, 
+		inset 0 0 0 20px #fff, 
+		inset 0 0 0 21px #e6b741;
+}
+
+.left h4, .center h4,
+.right h4 {
+  font-weight: 700;
+	text-transform: uppercase;
+  text-align: center;
+	font-family: 'Arvo', Arial, sans-serif;
+  margin: 1em 0;
+	font-size: 16px;
+	padding-bottom: 10px;
+	color: #323b4c;
+	border-bottom: 4px double #323b4c;
+	text-shadow: 1px 1px 0 #fff, 2px 2px 0 #E6B741;
+	letter-spacing: 2px;
+}
+
+.rm-logo, 
+.front h2,
+.front h4,
+a.rm-button-open,
+.rm-modal h5 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: 'Arvo', Arial, sans-serif;
+}
+
+.rm-logo {
+	width: 100px;
+	height: 100px;
+	background: #323b4c url(../images/logo.jpeg) no-repeat center center;
+	border-radius: 50%;
+	margin: 20px auto;
+	box-shadow: 
+		0 0 0 3px #fff, 
+		0 0 0 4px #e6b741, 
+		0 0 0 5px #fff, 
+		0 0 0 6px #e6b741, 
+		0 0 0 7px #fff, 
+		0 0 0 8px #e6b741;
+}
+
+.front h2 {
+  text-align: center;
+	letter-spacing: 2px;
+	font-size: 26px;
+	text-shadow: 1px 1px 0 #fff, 3px 3px 0 #e6b741;
+}
+
+.front h3 {
+	font-size: 13px;
+	margin: 40px 0;
+	padding: 20px 40px;
+	color: #323b4c;
+	font-weight: 500;
+	border-top: 4px double #323b4c;
+	text-transform: uppercase;
+	line-height: 20px;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+}
+
+.left dl, .center dl,
+.right dl {
+  overflow: auto;
+  margin: 2px;
+}
+
+.left dl dt, .center dl dt,
+.right dl dt {
+  margin: 6px;
+  font-weight: 500;
+	text-transform: uppercase;
+  float: left;
+}
+
+.left dl dd, .center dl dd,
+.right dl dd {
+  margin: 0;
+  font-size: 13px;
+	padding: 4px 5px 5px;
+	line-height: 15px;
+	color: #333;
+  float: left;
+  
+}
+
+.left .price, .center .price,
+.right .price {
+  float: right;
+  font-family: 'Nunito', sans-serif;;
+}
+
+.rm-close {
+	background: #e6b741;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 15px;
+	padding: 2px 5px;
+	top: -5px;
+	opacity: 1;
+	right: 30px;
+	cursor: pointer;
+}
+
+/* efectos */
+
+ .left {
+  transform: rotateY(180deg);
+  transition: all 1s;
+  transform-origin: right;
+  transform-style: preserve-3d;
+}
+
+.left2 {
+  transform: rotateY(0deg);
+}
+ 
+.side {
+  backface-visibility: hidden;
+} 
+
+
+.front {
+ transform: rotatey(180deg); 
+ position: absolute;
+ width: 80%;
+ margin-top: 50px;
+ text-align: center;
+}
+
+/* pagina derecha */
+
+.right {
+  transform: rotateY(-180deg);
+  transform-origin: left;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+
+.right2 {
+  transform: rotateY(0deg);
+}
+
+.right3 {
+  transform: rotateY(-180deg);
+  transform-origin: right;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+
+.side-back {
+  backface-visibility: hidden;
+}
+
+.atras {
+  transform: rotateY(180deg);
+  background: white;
+}
